@@ -46,9 +46,29 @@ class MenuHelper
         if (!Yii::$app->user->isGuest) {
             $menuItems[] = ['label' => 'MASTER', 'header' => true];
             $menuItems[] = [
+                'label' => 'Auth Item',
+                'icon' => 'cog',
+                'url' => ['/auth-item'],
+                // 'target' => '_blank',
+                // 'visible' => Yii::$app->user->can('theCreator')
+            ];
+            $menuItems[] = [
+                'label' => 'Auth Item Child',
+                'icon' => 'cog',
+                'url' => ['/auth-item-child'],
+                // 'target' => '_blank',
+                // 'visible' => Yii::$app->user->can('theCreator')
+            ];
+            $menuItems[] = [
                 'label' => 'Rack Level',
                 'icon' => 'bars',
                 'url' => ['rack-level'],
+                'badge' => '<span class="right badge badge-danger">New</span>'
+            ];
+            $menuItems[] = [
+                'label' => 'Item',
+                'icon' => 'th-list',
+                'url' => ['/item'],
                 'badge' => '<span class="right badge badge-danger">New</span>'
             ];
             $menuItems[] = [
@@ -56,19 +76,19 @@ class MenuHelper
                 'icon' => 'file-code',
                 'url' => ['/gii'],
                 'target' => '_blank',
-                'visible' => Yii::$app->user->can('theCreator')
+                // 'visible' => Yii::$app->user->can('theCreator')
             ];
             $menuItems[] = [
                 'label' => 'Debug',
                 'icon' => 'bug',
                 'url' => ['/debug'],
                 'target' => '_blank',
-                'visible' => Yii::$app->user->can('theCreator')
+                // 'visible' => Yii::$app->user->can('theCreator')
             ];
             $menuItems[] = [
                 'label' => 'User',
                 'icon' => 'users',
-                'url' => ['user'],
+                'url' => ['/user'],
                 // 'target' => '_blank',
                 // 'visible' => Yii::$app->user->can('theCreator')
             ];
