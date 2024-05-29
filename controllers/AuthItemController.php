@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\rbac\models\AuthItem;
 use app\models\AuthItemSearch;
+use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
